@@ -37,7 +37,7 @@ const date = new Date().toISOString().split("T")[0];
 // Gemini Client
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 // const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-8b" });
 
 const prompt = `
 You are a senior release manager.
