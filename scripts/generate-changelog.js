@@ -1,9 +1,17 @@
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-require("dotenv").config();
+// const { execSync } = require("child_process");
+// const fs = require("fs");
+// const path = require("path");
+// require("dotenv").config();
+// const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+import { execSync } from "child_process";
+import fs from "fs";
+import path from "path";
+import dotenv from "dotenv";
+dotenv.config();
+
+import { GoogleGenAI } from "@google/genai";
+
 
 // Current branch
 const currentBranch = execSync("git branch --show-current").toString().trim();
@@ -35,7 +43,8 @@ const author = execSync("git config user.name").toString().trim();
 const date = new Date().toISOString().split("T")[0];
 
 // Gemini Client
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const genAI = new GoogleGenAI({apiKey: process.env.GEMINI_API_KEY});
+// console.logprocess.env.GEMINI_API_KEY);
 // const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-8b" });
 
