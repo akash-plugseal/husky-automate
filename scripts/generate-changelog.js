@@ -22,7 +22,7 @@ const sourceBranch =
 
 // Get commit logs between branches
 const commitLogs = execSync(
-  `git log ${currentBranch}..${sourceBranch} --pretty=format:"%s"`
+  `git log ${sourceBranch}..${currentBranch} --pretty=format:"%s"`
 ).toString().trim();
 
 if (!commitLogs) {
