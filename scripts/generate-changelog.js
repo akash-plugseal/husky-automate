@@ -63,6 +63,8 @@ async function run() {
       },
     });
 
+    console.log(response);
+    console.log(response.text);
     releaseNotes = response.text;
   } catch (err) {
     console.log("⚠ Gemini failed, fallback to raw commits");
