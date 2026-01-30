@@ -35,8 +35,12 @@ const date = new Date().toISOString().split("T")[0];
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 const prompt = `
-You are a senior release manager.
-Convert these commit messages into professional release notes with emojis.
+Act as a Release Notes Generator for a Node project.
+
+From the commit history, infer features, improvements, fixes, and technical changes. 
+Group related commits, remove noise, and write a clean enterprise-grade changelog entry.
+
+Follow this exact template and style from the example provided.
 
 Commits:
 ${commitLogs}
