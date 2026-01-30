@@ -63,3 +63,12 @@ Based on the commit history provided, here are the release notes:
 
 *Note: Redundant and non-descriptive commits (e.g., "dadsad") were omitted from this report.*
 
+
+---
+
+## 🚀 Release on 2026-01-30
+**Merged by:** akash-plugseal  
+**Branch:** pre-prod
+
+- **Observability**: Enhanced system traceability and diagnostic capabilities through the implementation of additional logging.
+
