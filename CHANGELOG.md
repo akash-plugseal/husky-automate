@@ -72,3 +72,18 @@ Based on the commit history provided, here are the release notes:
 
 - **Observability**: Enhanced system traceability and diagnostic capabilities through the implementation of additional logging.
 
+
+---
+
+## 🚀 Release on 2026-01-30
+**Merged by:** akash-plugseal  
+**Branch:** pre-prod
+
+### Features
+* **Core API Infrastructure**: Established the base server architecture using Express.js to handle application routing and middleware.
+* **User Management System**: Implemented comprehensive user data models and controllers utilizing Mongoose for persistence and business logic.
+* **Content Modeling**: Introduced Mongoose schemas for structured content management and data validation.
+
+### Technical Changes
+* Integrated Mongoose as the primary ODM (Object Data Modeling) tool for MongoDB interactions.
+
